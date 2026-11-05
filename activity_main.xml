@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101010"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ============ Topo: logo + estado ============ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_logo" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-black"
+                android:text="setas"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="6dp">
+
+                <View
+                    android:id="@+id/dotStatus"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/dot" />
+
+                <TextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="0.08"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ============ Apresentação ============ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:fontFamily="sans-serif-black"
+            android:lineSpacingMultiplier="0.95"
+            android:text="Desenhe\nsetas no seu"
+            android:textColor="#FFFFFF"
+            android:textSize="38sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_lime_tag"
+            android:fontFamily="sans-serif-black"
+            android:paddingStart="12dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="4dp"
+            android:text="xadrez"
+            android:textColor="#101010"
+            android:textSize="38sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="3dp"
+            android:text="Um app que fica por cima do app de xadrez que você já usa. Marque ideias com setas, círculos e o selo !! sem mexer nas peças."
+            android:textColor="#C9C9C9"
+            android:textSize="15sp" />
+
+        <!-- ============ Como funciona ============ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.1"
+            android:text="COMO FUNCIONA"
+            android:textColor="#C8FF00"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text=".01"
+                android:textColor="#C8FF00"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="2dp"
+                android:text="Uma tela transparente fica por cima do app de xadrez, sem alterar o app."
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text=".02"
+                android:textColor="#C8FF00"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="2dp"
+                android:text="Você alinha o tabuleiro uma vez, com o botão de moldura. O app encaixa tudo nas 64 casas."
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text=".03"
+                android:textColor="#C8FF00"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="2dp"
+                android:text="Com o lápis ligado, o toque desenha. Com ele desligado, o toque passa direto e você joga normalmente."
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- ============ Permissão (aparece só se faltar) ============ -->
+        <LinearLayout
+            android:id="@+id/cardPerm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_dark_card"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text=".00  PERMISSÃO"
+                android:textColor="#C8FF00"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="3dp"
+                android:text="Para desenhar sobre outros apps, o Android pede a permissão &quot;exibir sobre outros apps&quot;. O app só usa isso para mostrar os botões e os desenhos."
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnPerm"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_lime"
+                android:fontFamily="sans-serif-black"
+                android:stateListAnimator="@null"
+                android:text="Permitir sobreposição"
+                android:textAllCaps="false"
+                android:textColor="#101010"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- ============ Escolha como iniciar ============ -->
+        <LinearLayout
+            android:id="@+id/cardStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:letterSpacing="0.1"
+                android:text="COMO INICIAR"
+                android:textColor="#C8FF00"
+                android:textSize="12sp" />
+
+            <!-- Com gravador -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_lime"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text=".01  COM GRAVADOR"
+                    android:textColor="#101010"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Setas que somem sozinhas"
+                    android:textColor="#101010"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="Quando uma peça se mexe, os desenhos são apagados na hora. Para isso o app usa a gravação de tela do Android: ele pede uma confirmação, mostra o ícone de gravação na barra e gasta um pouco mais de bateria. Ele só compara a imagem do tabuleiro, não lê os lances."
+                    android:textColor="#101010"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btnStartRec"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btn_dark"
+                    android:fontFamily="sans-serif-black"
+                    android:stateListAnimator="@null"
+                    android:text="Iniciar com gravador  ↗"
+                    android:textAllCaps="false"
+                    android:textColor="#C8FF00"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Sem gravador -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_dark_card"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text=".02  SEM GRAVADOR"
+                    android:textColor="#C8FF00"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Leve e sem gravação"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="Não usa a gravação de tela e não pede confirmação. Você apaga os desenhos na mão, com a lixeira ou o botão de desfazer."
+                    android:textColor="#C9C9C9"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btnStartPlain"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btn_outline"
+                    android:fontFamily="sans-serif-black"
+                    android:stateListAnimator="@null"
+                    android:text="Iniciar sem gravador"
+                    android:textAllCaps="false"
+                    android:textColor="#C8FF00"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ============ Em execução: desligar ============ -->
+        <LinearLayout
+            android:id="@+id/cardRunning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_dark_card"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="EM EXECUÇÃO"
+                android:textColor="#C8FF00"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Botões na tela"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="3dp"
+                android:text="Abra o app de xadrez para usar."
+                android:textColor="#C9C9C9"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtRunInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/btn_white"
+                android:fontFamily="sans-serif-black"
+                android:stateListAnimator="@null"
+                android:text="■  Desligar"
+                android:textAllCaps="false"
+                android:textColor="#101010"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Desligue quando terminar de jogar. Isso remove os botões e encerra a gravação."
+                android:textColor="#8A8A8A"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- ============ Guia dos botões ============ -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.1"
+            android:text="OS BOTÕES"
+            android:textColor="#C8FF00"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:lineSpacingExtra="5dp"
+            android:text="Lápis:  liga e desliga o desenho\n!!:  coloca o selo numa casa\nBolinha:  troca a cor\nSeta curva:  desfaz o último desenho\nLixeira:  apaga tudo\nMoldura:  alinha o quadrado ao tabuleiro"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="3dp"
+            android:text="Arraste qualquer botão para mudar de lugar."
+            android:textColor="#8A8A8A"
+            android:textSize="13sp" />
+
+        <!-- ============ Rodapé ============ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#C8FF00" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="✕  BOAS JOGADAS  ✕"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#C8FF00" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
