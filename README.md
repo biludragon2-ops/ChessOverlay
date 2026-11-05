@@ -13,3 +13,5 @@ Aviso de Propriedade Intelectual e Termos de Uso:
    - É estritamente PROIBIDA a comercialização, venda, aluguel ou exploração econômica (direta ou indireta) deste produto, de suas partes ou de seu código.
 
 4. AUSÊNCIA DE GARANTIAS: O software é fornecido "no estado em que se encontra" (as is), sem nenhuma garantia de qualquer tipo, expressa ou implícita. O autor não se responsabiliza por quaisquer danos ou problemas decorrentes do uso deste software.
+
+Baixe o arquivo "BAIXE-AQUI.ZIP", abra o zip e instale o APK. Dentro do aplicativo, ele ira pedir acesso a sobrepor telas, é importante que você ative, para o aplicativo funcionar e conseguir gerar setas
